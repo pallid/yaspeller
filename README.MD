@@ -42,4 +42,4 @@ opm install -f yaspeller*.ospx
 //У тебя все хорошо?
 ```
 
-# [Ограничения API Яндекс.Спеллера](http://legal.yandex.ru/speller_api/)
+## [Ограничения API Яндекс.Спеллера](http://legal.yandex.ru/speller_api/)
