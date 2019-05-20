@@ -8,6 +8,7 @@ stages:
 test:
   stage: test
   script:
+    - opm install 1testrunner
     - 1testrunner -runall ./tests
   artifacts:
     when: on_failure
