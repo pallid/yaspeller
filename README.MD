@@ -1,6 +1,6 @@
 # yaspeller
 
-Средство проверок опечаток в тексте.
+Средство проверок и исправления опечаток в тексте.
 
 Используется API [Yandex.Speller](https://tech.yandex.ru/speller/doc/dg/concepts/About-docpage/).
 
