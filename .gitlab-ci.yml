@@ -32,7 +32,7 @@ deploy to hub.oscript:
   variables:
     GIT_STRATEGY: none
   script:
-  - opm push --token $GITHUB_TOKEN --channel stable $CI_PROJECT_NAME-$CI_COMMIT_REF_NAME.ospx 
+  - opm push --token $GITHUB_TOKEN --channel stable ./$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME.ospx 
   artifacts:
     when: on_failure
     paths:
