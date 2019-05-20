@@ -1,3 +1,4 @@
+build
 oscript_modules/*
 features/*
 tests.xml
