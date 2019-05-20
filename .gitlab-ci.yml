@@ -27,8 +27,8 @@ build:
     name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME"
     paths:
     - $CI_PROJECT_NAME-$CI_COMMIT_REF_NAME.ospx
-  # only:
-  #   - tags  
+  only:
+    - tags  
 
 deploy to hub.oscript:
   stage: deploy
@@ -42,5 +42,5 @@ deploy to hub.oscript:
     paths:
     - .
     expire_in: 1 day
-  # only:
-  #   - tags
+  only:
+    - tags
