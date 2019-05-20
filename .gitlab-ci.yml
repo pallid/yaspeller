@@ -19,9 +19,6 @@ test:
 build:
   stage: build
   script:
-  # - grep '%ver' -P -R -I -l packagedef | xargs sed -i 's/%ver/'$CI_COMMIT_REF_NAME'/g'
-  # .- mkdir ./build
-  # - opm build -m ./packagedef -o ./build  .
   - opm build . -mf packagedef -out .
   artifacts:
     name: "$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME"
@@ -35,8 +32,7 @@ deploy to hub.oscript:
   variables:
     GIT_STRATEGY: none
   script:
-  # - cd ./build
-  - opm push --token $GITHUB_TOKEN --file $CI_PROJECT_NAME-$CI_COMMIT_REF_NAME --channel stable
+  - opm push --token $GITHUB_TOKEN --channel stable $CI_PROJECT_NAME-$CI_COMMIT_REF_NAME.ospx 
   artifacts:
     when: on_failure
     paths:
